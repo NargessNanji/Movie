@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#273118">
+
+    <ImageView
+        android:id="@+id/imageViewPoster1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/imageViewPoster2"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="25dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPoster1"
+        app:layout_constraintDimensionRatio="2:3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPoster1"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@+id/imageViewPoster2"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPoster1"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/textViewOverview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:background="#AB863E"
+        tools:maxLines="8"
+        android:padding="10dp"
+        android:paddingRight="15dp"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/imageViewPoster2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPoster2"
+        tools:text="@tools:sample/lorem/random" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:numStars="10"
+        android:rating="6"
+        android:theme="@style/RatingBar"
+        app:layout_constraintLeft_toRightOf="@+id/imageViewPoster2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <TextView
+        android:id="@+id/textViewReleaseDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="25dp"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toRightOf="@+id/imageViewPoster2"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+        tools:text="2018/02/02" />
+
+    <TextView
+        android:id="@+id/textViewGenres"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingRight="25dp"
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="@+id/imageViewPoster2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOverview"
+        tools:text="Genres: Action, Dram, Romantic" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
